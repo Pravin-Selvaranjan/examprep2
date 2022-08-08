@@ -88,3 +88,33 @@ def find_next_square(sq):
         return -1
 ```
 
+This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+The parameter of accum is a string which includes only letters from a..z and A..Z.
+```
+def split(word):
+    return [char for char in word]
+
+def accum(s):
+    n = -1
+    seperate_list = []
+    list_of_chars = split(s)
+    for x in range(len(list_of_chars)):
+        if x == 0:
+            print(list_of_chars[x].upper(), end="")
+        else:
+            print("-" + list_of_chars[x].upper(), end="")
+            
+        n += 1
+        for i in range(n):
+            print(list_of_chars[x].lower(), end="")
+                
+    return seperate_list
+    
+```
+        
+    
